@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>cizion_reply</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>댓글 수정</h1>
+        <hr>
+
+        <form action="/detail/reply/<%= reply.id %>?_method=PUT" method="post">
+            <input type="hidden" name="postID" value=<%= postId %>>
+            <input type="hidden" name="replyWriterId" value=<%= reply.userEmail %>>
+            <input type="text" name="editContent" value="<%= reply.content %>">
+            <input type="submit" value="전송하기">
+        </form>
+    </body>
+</html>
